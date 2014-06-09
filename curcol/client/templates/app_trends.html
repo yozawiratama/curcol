@@ -1,0 +1,21 @@
+<template name="app_trends">
+    {{#if SignedIn}}
+    <div class="container">
+        {{>navbar}}
+        <div class="col-md-12">
+            <div class="col-md-offset-3 col-md-6">
+                {{>form_post}}
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-3">
+                
+            </div>
+            <div class="col-md-6">
+                {{>trends}}
+            </div>
+        </div>
+    </div>
+    {{else}} {{>landing}} {{/if}}
+
+</template>

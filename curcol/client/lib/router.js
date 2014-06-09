@@ -40,7 +40,7 @@ Router.map(function () {
     });
     this.route('trending', {
         path: '/trending',
-        template: 'app',
+        template: 'app_trends',
         waitOn: function () {
             return [Meteor.subscribe('PostsByTrends')];
         },
