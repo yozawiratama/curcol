@@ -1,0 +1,11 @@
+{
+  "packages": {
+    "bootstrap-3": {},
+    "iron-router": {},
+    "font-awesome": {},
+    "bootboxjs": {},
+    "iron-router-progress": {},
+    "reststop2": {},
+    "page-js-ie-support": {}
+  }
+}

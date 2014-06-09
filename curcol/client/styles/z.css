@@ -1,0 +1,23 @@
+body {
+    background-color: #eb563e;
+}
+.top-menu > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-top-left-radius: 0;
+}
+.top-menu > .btn:last-child:not(:first-child):not(.dropdown-toggle) {
+    border-top-right-radius: 0;
+}
+.top-menu > .btn {
+    height: 35px;
+}
+.no-margin {
+    margin: 0;
+}
+a.light {
+    color: #F2F2F2;
+    opacity: 0.8;
+}
+a.light:hover {
+    color: #FFFFFF;
+    opacity: 1.0;
+}

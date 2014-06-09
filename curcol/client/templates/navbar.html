@@ -1,0 +1,11 @@
+<template name="navbar">
+<div class="" >
+            <div class="btn-group pull-right top-menu" style="margin-bottom : 10px;">
+                <a class="btn btn-default" href="/"><i class="fa fa-home"></i>&nbsp;Home</a>
+                <a class="btn btn-default" href="/trending"><i class="fa fa-bullhorn"></i>&nbsp;Trending</a>
+                <a type="button" class="btn btn-default" href="/{{Username}}"><i class="fa fa-user"></i>&nbsp;{{Username}}</a>
+                <a type="button" class="btn btn-default" href="/n"><i class="fa fa-bell"></i>&nbsp;Notifications &nbsp; <span class="badge">{{AmountUnreadNotif}}</span></a>
+                <button id="btnSignOut" type="button" class="btn btn-default">Sign Out</button>
+            </div>
+        </div>
+</template>

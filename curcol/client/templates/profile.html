@@ -1,0 +1,26 @@
+<template name="profile">
+    <section class="col-md-12 card2 {{Selected}} {{Unread}}">
+        <div class="card2-content">
+
+            <h4 class="header">
+                <a href="/{{Username}}">{{Username}}</a>
+            </h4>
+            <div>
+                {{#if IsOwn}}
+                {{else}}
+                <center>
+                    {{#if IsFollow}}
+                    <button id="btnUnfollow" class="btn btn-primary" >Unfollow</button>
+                    {{else}}
+                    <button id="btnFollow" class="btn btn-primary" >Follow</button>
+                    {{/if}}
+                </center>
+                {{/if}}
+            </div>
+            <h5 class="date">
+                <small>{{Bio}}</small>
+            </h5>
+
+        </div>
+    </section>
+</template>

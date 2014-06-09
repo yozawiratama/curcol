@@ -1,0 +1,94 @@
+<template name="post">
+    <section class="col-md-12 card2 {{Selected}} {{Unread}}">
+        <div class="btn-group pull-right">
+                <button type="button" class="btn btn-default dropdown-toggle btn-options" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    {{#if IsCreator}}
+                    <li>
+                        <a id="btnEdit" href="#">Edit</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a id="btnDelete" href="#">Delete</a>
+                    </li>
+                    {{else}}
+                    <li>
+                        <a id="btnReport" href="#">Report</a>
+                    </li>
+                    {{/if}}
+                </ul>
+            </div>
+        <div class="card2-content">
+            
+            <h4 class="header">
+                <a href="/{{CreatedBy}}">{{CreatedBy}}</a>
+            </h4>
+            <h5 class="date">
+                <small>Wrote on {{CreatedAt}}</small>
+            </h5>
+            {{#if IsImageUrl}}
+            <img src="{{ImageUrl}}" />{{/if}}
+            <textarea id="txaPost{{_id}}" maxlength="200" class="post" style="padding: 5px 15px; cursor:pointer;" {{IsDisabledForEdit}} placeholder="What is in your mind">{{Content}}</textarea>
+            {{#if IsEdit}}
+            <div class="footer col-md-6">
+                <!--                    <i id="btnAddImages" class="fa fa-image"></i>-->
+            </div>
+            <div class="footer col-md-6">
+                <button id="btnUpdatePost" class="btn btn-primary btn-xs pull-right">publish</button>
+            </div>
+            {{/if}}
+        </div>
+        {{#if IsSelected}}
+        <div class="comment-group col-md-12">
+            {{#each Comments}} {{>comment}} {{/each}}
+            <div>
+                <input id="inpComment{{_id}}" class="col-md-12 form-control" type="text" />
+            </div>
+
+        </div>
+        {{/if}}
+    </section>
+</template>
+
+<template name="comment">
+    <div>
+        <h4 class="comment col-md-10">
+            <a href="/{{CreatedBy}}">{{CreatedBy}}</a>
+            <small>{{Comment}}</small>
+        </h4>
+        <div class="col-md-2">
+            <div class="btn-group pull-right">
+                <button type="button" class="btn btn-default dropdown-toggle btn-options" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    {{#if IsCreator}}
+                    <!--
+                    <li>
+                        <a id="btnEdit" href="#">Edit</a>
+                    </li>
+                    <li class="divider"></li>
+-->
+                    <li>
+                        <a id="btnDelete" href="#">Delete</a>
+                    </li>
+                    {{else}}
+                    <li>
+                        <a id="btnReport" href="#">Report</a>
+                    </li>
+                    {{/if}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="notification">
+    <a href="/p/{{Post_ID}}" class="list-group-item">
+        {{#if IsRead}}<i class="fa fa-check"></i>{{else}}<i class="fa fa-circle"></i>{{/if}}
+    {{CreatedBy}} has {{Type}}ed on your post at {{CreatedAt}}.
+  </a>
+    
+</template>

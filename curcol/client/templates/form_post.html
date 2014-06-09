@@ -1,0 +1,19 @@
+<template name="form_post">
+    <section class="col-md-12 card2">
+        <div class="card2-content">
+            {{#if IsImageUrl}}
+            <img src="{{ImageUrl}}" />{{/if}}
+            <textarea id="txaPublishPost" maxlength="200" class="post" placeholder="What is in your mind"></textarea>
+        </div>
+        <div class="footer col-md-6">
+            <i id="btnAddImages" class="fa fa-image"></i>
+        </div>
+
+        <div class="footer col-md-6">
+            <div class="pull-right">
+
+                <button id="btnPublishPost" class="btn btn-primary btn-xs ">publish</button>
+            </div>
+        </div>
+    </section>
+</template>
