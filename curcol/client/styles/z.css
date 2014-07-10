@@ -21,3 +21,15 @@ a.light:hover {
     color: #FFFFFF;
     opacity: 1.0;
 }
+.post {
+    padding: 20px;
+}
+.btn-flat {
+    outline: 0;
+    border: 1px transparent solid;
+    background: transparent;
+    color: #555;
+}
+.btn-flat:hover {
+    border: 1px #777 solid;
+}

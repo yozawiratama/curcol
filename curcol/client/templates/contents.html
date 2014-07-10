@@ -21,18 +21,17 @@
             </ul>
         </div>
         <div class="card2-content">
-            <div style="height:45px; width:45px;">
-                <img src="/img/grumpy.jpg"  class="img-responsive" />
-            </div>
-<!--
-            <h4 class="header">
-                <a href="/{{CreatedBy}}">{{CreatedBy}}</a>
-            </h4>
--->
+            <!--
+                <div style="height:45px; width:45px;">
+                    <img src="/img/grumpy.jpg" class="img-responsive" />
+                </div>
+                <h4 class="header">
+                    <a href="/{{CreatedBy}}">{{CreatedBy}}</a>
+                </h4>
+            -->
             <h5 class="date">
                 <small>Wrote on {{CreatedAt}}</small>
             </h5>
-            
             {{#if IsImageUrl}}
             <img src="{{ImageUrl}}" class="card-thumbnail" />{{/if}}
             <textarea id="txaPost{{_id}}" maxlength="200" class="post" style="padding: 5px 15px; cursor:pointer;" {{IsDisabledForEdit}} placeholder="What is in your mind">{{Content}}</textarea>
@@ -49,7 +48,7 @@
         <div class="comment-group col-md-12">
             {{#each Comments}} {{>comment}} {{/each}}
             <div>
-                <input id="inpComment{{_id}}" class="col-md-12 form-control" type="text" />
+                <input id="inpComment{{_id}}" class="col-md-12 form-control" type="text" style="margin-bottom:0px;" />
             </div>
 
         </div>
@@ -63,7 +62,7 @@
             <a href="/{{CreatedBy}}">{{CreatedBy}}</a>
             <small>{{Comment}}</small>
         </h4>
-        <div class="col-md-2">
+        <div class="col-md-2" style="padding-right:0px;">
             <div class="btn-group pull-right">
                 <button type="button" class="btn btn-default dropdown-toggle btn-options" data-toggle="dropdown">
                     <span class="caret"></span>
@@ -75,7 +74,7 @@
                         <a id="btnEdit" href="#">Edit</a>
                     </li>
                     <li class="divider"></li>
--->
+                    -->
                     <li>
                         <a id="btnDelete" href="#">Delete</a>
                     </li>
